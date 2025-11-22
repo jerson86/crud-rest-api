@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "2d0403c3-7921-4ab5-ac24-4cc85f650bf0",
+		"name": "Api rest spring boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25798543",
+		"_collection_link": "https://nequi2.postman.co/workspace/Charlas~018c51e2-f407-41a5-9522-14767efb4088/collection/25798543-2d0403c3-7921-4ab5-ac24-4cc85f650bf0?action=share&source=collection_link&creator=25798543"
+	},
+	"item": [
+		{
+			"name": "Listar usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/users\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar usuario por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/users/1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl http://localhost:8080/api/users/1\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"María\",\"email\":\"maria@example.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:8080/api/users \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"name\":\"María\",\"email\":\"maria@example.com\"}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"María Actualizada\",\"email\":\"maria2@example.com\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT http://localhost:8080/api/users/1 \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"name\":\"María Actualizada\",\"email\":\"maria2@example.com\"}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE http://localhost:8080/api/users/1\r\n"
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
